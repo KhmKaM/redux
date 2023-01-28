@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/actions/cartActions";
 import { delProduct, updProduct } from "../redux/actions/productActions";
 
 const Product = (props) => {
@@ -27,6 +28,9 @@ const Product = (props) => {
         setN(props.name);
         setP(props.price);
     }
+    const buyHandler = () => {
+        dispatch(addToCart({name: n, price: p}))
+    }
     return <tr>
         <td>
             {update ?
@@ -47,6 +51,7 @@ const Product = (props) => {
                 : <>
                 <button onClick={() => {setUpdate(true)}}>Изменить</button>
                 <button onClick={delHandler}>Удалить</button>
+                <button onClick={buyHandler}>Купить</button>
                 </>
             }
         </td>
