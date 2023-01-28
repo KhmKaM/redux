@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { increment, decrement } from "../redux/actions/cartActions";
+import { increment, decrement } from "../rtk/cartReducer";
 const Item = (props) => {
     const dispatch = useDispatch();
     return <tr>

@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import Product from "./Product";
 import { useSelector } from "react-redux";
 
 const List = () => {
-    const goods = useSelector(state => state.product);
+    const goods = useSelector(state => state.product.value);
     return <table>
         <thead>
             <tr>

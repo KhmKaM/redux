@@ -3,7 +3,6 @@ import CartItem from "./CartItem";
 
 const Cart = () => {
     const data = useSelector(state => state.cart.value);
-    console.log(data);
     return <div>
         <h2>Корзина</h2>
         <table>
